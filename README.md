@@ -2,7 +2,7 @@
 The python script let's you search for FB pages and scrape their posts (including comments and likes).
 
 ## How to
-Before carrying out the steps below you need to be a registerede FB developer and have a valid access_token from Facebook Graph API.
+Before carrying out the steps below you need to be a registered FB developer and have a valid access_token from Facebook Graph API.
 If you're registered, you can grab a fresh token from https://developers.facebook.com/tools/explorer/
 
 1. Open a new terminal window
