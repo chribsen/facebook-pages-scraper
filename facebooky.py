@@ -69,8 +69,10 @@ while more_pages:
 
         if comment_response.get('paging'):
             while comment_response['paging'].get('next'):
-                next_comment_url = response['paging']['next']
-                comments += get_response(next_comment_url).json()['data']
+                next_comment_url = comment_response['paging']['next']
+                r = get_response(next_comment_url)
+                comment_response = r.json()
+                comments += comment_response['data']
 
             print('Received {0} comments from post'.format(str(len(comments))))
 
@@ -83,8 +85,10 @@ while more_pages:
 
         if like_response.get('paging'):
             while like_response['paging'].get('next'):
-                next_like_url = response['paging']['next']
-                likes += get_response(next_like_url).json()['data']
+                next_like_url = like_response['paging']['next']
+                r = get_response(next_like_url)
+                like_response = r.json()
+                likes += like_response['data']
 
             print('Received {0} likes from post'.format(str(len(likes))))
 
